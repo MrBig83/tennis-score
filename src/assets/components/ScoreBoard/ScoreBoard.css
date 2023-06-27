@@ -1,0 +1,25 @@
+.ScoreBoard {
+    margin-top: 2rem;
+    border: 1px solid white;
+}
+
+.scoresPlayer1, .scoresPlayer2 {
+    display: flex;
+    font-size: 20px;
+    gap: 2rem;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.gamePlayer1, .gamePlayer2 {
+    
+    border: 2px solid green;
+    height: 2rem;
+    width: 2rem;
+}
+
+.set1Player1, .set2Player1, .set3Player1, .set1Player2, .set2Player2, .set3Player2{
+    border: 1px solid yellow;
+    height: 2rem;
+    width: 2rem;
+}

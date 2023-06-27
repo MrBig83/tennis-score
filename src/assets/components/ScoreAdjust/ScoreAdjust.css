@@ -1,0 +1,30 @@
+.scoreAdjust{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.scoreAdjustPlayer1, .scoreAdjustPlayer2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 400px;
+    border: 1px solid blue;
+}
+.scoreAdjustPlayer1 > button {
+    width: 25px;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.scoreAdjustPlayer2 > button {
+    width: 25px;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
