@@ -1,23 +1,22 @@
-import { useState, createContext } from 'react'
+import React, { useState } from 'react';
 
-export const NameContext = createContext
+const NameContext = React.createContext();
 
+const NameProvider = ({ children }) => {
+  const [ name1, setName1 ] = useState("Ange namn 1");
+  const [ name2, setName2 ] = useState("Ange namn 2");
 
-const NameContextProvider = () => {
-
-    const [namePlayer1, setNamePlayer1] = useState("");
-    const [namePlayer2, setNamePlayer2] = useState("");
-
-    return(
-        <NameContext.Provider
-            value={{
-                namePlayer1, 
-                setNamePlayer1, 
-                namePlayer2, 
-                setNamePlayer2,
-            }}
-        >
-        </NameContext.Provider>
-    );
+  return (
+    <NameContext.Provider 
+    value={{ 
+        name1, 
+        setName1, 
+        name2, 
+        setName2
+        }}>
+      {children}
+    </NameContext.Provider>
+  );
 };
-export default NameContextProvider;
+
+export { NameProvider, NameContext };

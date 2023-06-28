@@ -1,8 +1,9 @@
-// import { useState } from 'react'
 import "./ScoreAdjust.css"
-function ScoreAdjust() {
-  // const [count, setCount] = useState(0)
+import { useContext } from 'react';
+import { NameContext } from "../../../context/NameContext";
 
+function ScoreAdjust() {
+  const { name1, name2 } = useContext(NameContext);
 
     //Gör score-states här för att spara till efterliggande konponenter
     //Poäng som visas mellan knapparna skall vara samma som på scoreboard
@@ -13,7 +14,7 @@ function ScoreAdjust() {
 
     <p>Justera poäng</p>
         <div className="scoreAdjustPlayer1">
-            <p className="name1">Namn på spelare 1</p>
+            <p className="name1">{name1}</p>
             <>
                 <button>-</button>
                 <p>0</p>
@@ -21,7 +22,7 @@ function ScoreAdjust() {
             </>
         </div>
         <div className="scoreAdjustPlayer2">
-            <p className="name1">Namn på spelare 2</p>
+            <p className="name1">{name2}</p>
             <>
                 <button>-</button>
                 <p>0</p>

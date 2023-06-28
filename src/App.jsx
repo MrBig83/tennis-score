@@ -1,26 +1,24 @@
-// import { useState } from 'react'
 import './App.css'
-
 
 import PlayerNameInput from "./assets/components/PlayerNameInput/PlayerNameInput"
 import ScoreAdjust from './assets/components/ScoreAdjust/ScoreAdjust'
 import ScoreBoard from './assets/components/ScoreBoard/ScoreBoard'
 
-function App() {
-  // const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-    
-      <p>Hej hej. Nej, detta ska inte vara här. Här vill jag bara importera saker. Eller till o med EN sak, som i sin tur importerar resten.</p>
+//import React from 'react';
+
+import ReactDOM from 'react-dom'
+import { NameProvider } from './context/NameContext';
+
+function App() {
+  ReactDOM.render(
+    <NameProvider>
       <PlayerNameInput />
       <ScoreAdjust />
       <ScoreBoard />
-      
-      </div>
-    </>
-  )
+    </NameProvider>,
+    document.getElementById('root')
+  );
 }
+export default App;
 
-export default App
