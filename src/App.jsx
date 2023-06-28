@@ -9,13 +9,16 @@ import ScoreBoard from './assets/components/ScoreBoard/ScoreBoard'
 
 import ReactDOM from 'react-dom'
 import { NameProvider } from './context/NameContext';
+import { ScoreProvider } from './context/ScoreContext';
 
 function App() {
   ReactDOM.render(
     <NameProvider>
       <PlayerNameInput />
-      <ScoreAdjust />
-      <ScoreBoard />
+      <ScoreProvider>
+        <ScoreAdjust />
+        <ScoreBoard />
+      </ScoreProvider>
     </NameProvider>,
     document.getElementById('root')
   );
