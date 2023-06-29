@@ -23,14 +23,14 @@ function PlayerNameInput() {
     <div>    
       <div className="playerInputs">
         <div className="inputPlayer1">
-          <p>Name player1:</p> 
-          <input placeholder="Name player 1" ref={inputName1} id="inputName1" />
+          <p>Namn spelare 1:</p> 
+          <input placeholder="Ex. Knatte" ref={inputName1} id="inputName1" />
           <button onClick={handleButtonClickPlayer1}>Spara</button>
         </div>
 
         <div className="inputPlayer2">
-          <p>Name player2: </p> 
-          <input placeholder="Namn spelare2" ref={inputName2} id="inputName2"></input>
+          <p>Namn spelare 2: </p> 
+          <input placeholder="Ex. Fnatte" ref={inputName2} id="inputName2"></input>
           <button onClick={handleButtonClickPlayer2}>Spara</button>
         </div>
       </div>

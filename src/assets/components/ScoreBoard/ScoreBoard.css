@@ -23,3 +23,8 @@
     height: 2rem;
     width: 2rem;
 }
+.matchPlayer1, .matchPlayer2{
+    border: 2px solid lightgray;
+    height: 2rem;
+    width: 2rem;
+}
