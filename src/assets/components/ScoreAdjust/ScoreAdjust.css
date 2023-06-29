@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 800px;
-    border: 1px solid blue;
+    border: 1px solid #3d3d3d;
 }
 .scoreAdjustPlayer1 > button {
     width: 25px;

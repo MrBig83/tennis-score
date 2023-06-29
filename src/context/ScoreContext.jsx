@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState, useContext } from 'react';
 import { NameContext } from "./NameContext";
 const ScoreContext = React.createContext();
 
-//Skapa states
+//Skapa states, dependencies m.m.
 const ScoreProvider = ({ children }) => {
+    const scoreTranslate = [0, 15, 30, 40, "Ad", "W"];
     const { name1, name2 } = useContext(NameContext);
 
-    const scoreTranslate = [0, 15, 30, 40, "Ad", "W"];
     const [ player1Game, setPlayer1Game ] = useState(0);
     const [ player2Game, setPlayer2Game ] = useState(0);
     const [ player1Set1, setPlayer1Set1 ] = useState(0);
@@ -50,15 +51,14 @@ const ScoreProvider = ({ children }) => {
         setPlayer1Set3(0)
         setPlayer2Set3(0)
     }
+
+    //Rendera vem som är vinnaren
     if(player1Match == 2 && winner == ""){
-        //Spelare 1 har vunnit!
         setWinner(name1)
     }
     if(player2Match == 2 && winner == ""){
-        //Spelare 2 har vunnit!
         setWinner(name2)
     }
-
 
     //Skicka vidare
     return (

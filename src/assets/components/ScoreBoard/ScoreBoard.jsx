@@ -5,7 +5,8 @@ import { ScoreContext } from "../../../context/ScoreContext";
 
 function ScoreBoard() {
   const { name1, name2 } = useContext(NameContext);
-  const { scoreTranslate, 
+  const { 
+    scoreTranslate, 
     setPlayer1Game, 
     player1Game,
     setPlayer2Game,
@@ -49,13 +50,11 @@ if(player1Game == 5 || player2Game == 5){
   saveScore()
 }
 
+//Regelverk för Deuce och direkt vinst vid score efter 40 och skillnad större än 2 poäng
 let deuce = "";
-
-
 if(player1Game && player2Game == 3){
   player1Game == player2Game ? deuce = "Deuce" : ""
 }
-
 if(player1Game == 4 && player2Game < 3){
   setPlayer1Game(player1Game +1)
 }
@@ -85,7 +84,6 @@ if(player2Game == 4 && player1Game < 3){
 
       </div>
       <button className="nextButton" onClick={saveScore}>Nästa</button>
-      <p>Styla sidan bättre...</p>
       {winner ? <h1>Vinnaren är {winner}!</h1> : ""}
     </div>
   )

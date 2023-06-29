@@ -1,6 +1,6 @@
 .ScoreBoard {
     margin-top: 2rem;
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255, 0.5);
 }
 
 .scoresPlayer1, .scoresPlayer2 {
@@ -8,23 +8,26 @@
     font-size: 20px;
     gap: 2rem;
     justify-content: center;
-    border: 1px solid red;
+    border: 1px solid #3d3d3d;
 }
 
 .gamePlayer1, .gamePlayer2 {
     
-    border: 2px solid green;
+    border: 2px solid rgba(255, 0, 0, 0.3);
     height: 2rem;
     width: 2rem;
 }
 
 .set1Player1, .set2Player1, .set3Player1, .set1Player2, .set2Player2, .set3Player2{
-    border: 1px solid yellow;
+    border: 1px solid rgba(255, 255, 0, 0.3);
     height: 2rem;
     width: 2rem;
 }
 .matchPlayer1, .matchPlayer2{
-    border: 2px solid lightgray;
+    border: 2px solid rgba(12, 224, 58, 0.2);
     height: 2rem;
     width: 2rem;
+}
+.nextButton {
+    margin: 2rem;
 }
