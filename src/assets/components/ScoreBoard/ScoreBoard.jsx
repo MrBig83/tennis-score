@@ -46,9 +46,9 @@ function saveScore(){
 }
 
 //Avkommentera nedan 3 rader för att slippa klicka på "Nästa" för att spara Game till Set
-if(player1Game == 5 || player2Game == 5){
-  saveScore()
-}
+// if(player1Game == 5 || player2Game == 5){
+//   saveScore()
+// }
 
 //Regelverk för Deuce och direkt vinst vid score efter 40 och skillnad större än 2 poäng
 let deuce = "";

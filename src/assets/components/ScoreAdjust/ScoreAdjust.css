@@ -5,7 +5,6 @@
     flex-direction: column;
 }
 
-
 .scoreAdjustPlayer1, .scoreAdjustPlayer2 {
     display: flex;
     flex-direction: row;
@@ -26,5 +25,3 @@
     align-items: center;
     justify-content: center;
 }
-
-
