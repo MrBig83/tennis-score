@@ -25,7 +25,9 @@ function ScoreBoard() {
     setPlayer2Set3, 
     player1Match,
     player2Match,
-    winner
+    winner, 
+    deuce, 
+    setDeuce
   } = useContext(ScoreContext)
 
 function saveScore(){
@@ -51,9 +53,10 @@ function saveScore(){
 // }
 
 //Regelverk för Deuce och direkt vinst vid score efter 40 och skillnad större än 2 poäng
-let deuce = "";
 if(player1Game && player2Game == 3){
-  player1Game == player2Game ? deuce = "Deuce" : ""
+  player1Game == player2Game ? setDeuce("Deuce") : setDeuce("")
+} else if (player1Game != player2Game){
+  setDeuce("")
 }
 if(player1Game == 4 && player2Game < 3){
   setPlayer1Game(player1Game +1)
