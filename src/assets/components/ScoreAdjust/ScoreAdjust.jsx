@@ -9,18 +9,27 @@ function ScoreAdjust() {
     player1Game, 
     setPlayer1Game,
     player2Game, 
-    setPlayer2Game,
+    setPlayer2Game
   } = useContext(ScoreContext)
 
   const addPointsPlayer1Game = () => {
-    player1Game < 5 ? setPlayer1Game(player1Game +1) : ""
+ 
+    if(player2Game == 4){
+      setPlayer2Game(player2Game -1)
+    } else if (player1Game < 5){
+      setPlayer1Game(player1Game +1)
+    } 
   }
   const decPointsPlayer1Game = () => {
     player1Game > 0 ? setPlayer1Game(player1Game -1) : ""
   }
 
   const addPointsPlayer2Game = () => {
-    player2Game < 5 ? setPlayer2Game(player2Game +1) : ""
+    if(player1Game == 4){
+      setPlayer1Game(player1Game -1)
+    } else if (player2Game < 5){
+      setPlayer2Game(player2Game +1)
+    } 
   }
   const decPointsPlayer2Game = () => {
     player2Game > 0 ? setPlayer2Game(player2Game -1) : ""

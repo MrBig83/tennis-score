@@ -19,6 +19,7 @@ const ScoreProvider = ({ children }) => {
     const [ player1Match, setPlayer1Match ] = useState(0);
     const [ player2Match, setPlayer2Match ] = useState(0);
     const [ winner, setWinner ] = useState("");
+    const [ deuce, setDeuce ] = useState("");
     
     //Testar alla villkor för poäng. (TennisRegler)
     if(player1Set1 >5 && player1Set1 - player2Set1 >1){
@@ -85,7 +86,9 @@ const ScoreProvider = ({ children }) => {
             setPlayer1Match,
             player2Match, 
             setPlayer2Match, 
-            winner
+            winner, 
+            deuce, 
+            setDeuce
             }}>
             {children}
         </ScoreContext.Provider>
